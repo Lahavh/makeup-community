@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgRedux } from 'ng2-redux';
+import { AppState } from '../state/app-state';
+import { UserStatuses } from '../user/user.class';
 
 @Component({
   selector: 'navbar',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public userStatus: UserStatuses;
+
+  constructor(private ngRedux: NgRedux<AppState>) { 
+    this.userStatus = this.ngRedux.getState().userStatus;
+    console.log("OUR USER STATUS: ", this.userStatus);
+  }
 
   ngOnInit(): void {
   }

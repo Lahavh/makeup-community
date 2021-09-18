@@ -1,9 +1,9 @@
-import { Post } from "../body/components/blog/post.class";
+import { UserStatuses } from "../user/user.class";
 
 export interface AppState {
-    posts: Post[];
+    userStatus: UserStatuses;
 }
 
 export const initialState: AppState = {
-    posts: []
+    userStatus: UserStatuses.LOGGED_IN
 }

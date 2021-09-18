@@ -11,7 +11,7 @@
         <section id="signin-form-content">
             <div class="row">
                 <div class="col-lg-6">
-                    <form id="signin-form" action="" method="POST" novalidate="novalidate">
+                    <form id="signin-form" novalidate="novalidate">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email" value="">
@@ -20,7 +20,7 @@
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" name="password">
                         </div>
-                        <button name="submit" type="submit" class="btn btn-primary">Sign In</button>
+                        <button type="button" class="btn btn-primary" (click)="signInClick()">Submit</button>
                         <span class="text-danger"></span>
                     </form>
                 </div>
